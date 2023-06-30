@@ -7,6 +7,11 @@ var controller_conn: WebSocketPeer = null;
 @onready var eye_r = $"eye_r";
 @onready var mouth = $"mouth";
 
+@onready var lower_lip = $"lowerlip";
+@onready var upper_lip = $"upperlip";
+@onready var left_eye = $"lefteye";
+@onready var right_eye =$"righteye"
+
 func _ready():
 	set_process(false);
 	set_physics_process(false);
@@ -28,7 +33,7 @@ func _physics_process(_delta):
 		var code = face_pos_conn.get_close_code()
 		var reason = face_pos_conn.get_close_reason()
 		print("WebSocket closed with code: %d, reason %s. Clean: %s" % [code, reason, code != -1])
-		set_process(false) # Stop processing.
+		set_physics_process(false) # Stop processing.
 		
 func handle_points(coords:PackedFloat32Array):
 	#print(typeof(points));
@@ -39,7 +44,11 @@ func handle_points(coords:PackedFloat32Array):
 	for  i in range(0,coords.size(),2):
 		points[int(i)/2] = Vector2(coords[i],coords[i+1]) * 2 - Vector2.ONE;
 		
-	eye_l.set_pos(points[37],points[38],points[39],points[40],points[41],points[42]);
-	eye_r.set_pos(points[46],points[45],points[44],points[43],points[48],points[47]);
-	mouth.set_pos(points[49],points[55]);
+	#eye_l.set_pos(points[37],points[38],points[39],points[40],points[41],points[42]);
+	#eye_r.set_pos(points[46],points[45],points[44],points[43],points[48],points[47]);
+	#mouth.set_pos(points[49],points[55]);
+	upper_lip.set_upper_pos(points);
+	lower_lip.set_lower_pos(points);
+	left_eye.set_left_pos(points);
+	right_eye.set_right_pos(points);
 	return;
