@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://c102lacodkywk"]
+
+[ext_resource type="Shader" path="res://art/eye.gdshader" id="1_p7hi4"]
+
+[resource]
+shader = ExtResource("1_p7hi4")
+shader_parameter/eye_selection = 1
+shader_parameter/colour = null

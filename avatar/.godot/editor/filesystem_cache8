@@ -1,0 +1,13 @@
+2a60927148abd1d33b818b535e306557
+::res://::1688126062
+avatar.tscn::PackedScene::9046379552956250215::1687985498::0::1::::<><>::res://root.gd<>res://connection_builder.gd<>uid://c102lacodkywk<>uid://cuqpjxas1q3ta<>res://art/eye.gd
+connection_builder.gd::GDScript::-1::1687985192::0::1::::<>Node<>::
+reciever.gd::GDScript::-1::1687891154::0::1::::<>Node<>::
+root.gd::GDScript::-1::1687985192::0::1::::<>Node<>::
+web_socket_server.gd::GDScript::-1::1687976803::0::1::::WebSocketServer<>Object<>::
+::res://art/::1688126209
+eye.gd::GDScript::-1::1687985073::0::1::::<>Node2D<>::
+eye.gdshader::Shader::-1::1687985614::0::1::::<><>::
+eye_mat.tres::ShaderMaterial::6651019752094322198::1687984835::0::1::::<><>::res://art/eye.gdshader
+mouth_mat.tres::ShaderMaterial::6374913635932255999::1688126209::0::1::::<><>::res://art/eye.gdshader
+robot_face_hi.png::CompressedTexture2D::6210576320138744790::1687379378::1687978328::1::::<><>::

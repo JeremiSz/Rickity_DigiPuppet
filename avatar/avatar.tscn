@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://d15esxjkhyled"]
+
+[ext_resource type="Script" path="res://root.gd" id="1_0t4x2"]
+[ext_resource type="Script" path="res://connection_builder.gd" id="1_7refr"]
+[ext_resource type="Material" uid="uid://c102lacodkywk" path="res://art/eye_mat.tres" id="3_6d2e6"]
+[ext_resource type="Texture2D" uid="uid://cuqpjxas1q3ta" path="res://art/robot_face_hi.png" id="4_1b4aa"]
+[ext_resource type="Script" path="res://art/eye.gd" id="5_hdb5m"]
+[ext_resource type="Material" uid="uid://cw3b5qaew0yst" path="res://art/mouth_mat.tres" id="6_4ntyd"]
+[ext_resource type="Script" path="res://art/mouth.gd" id="7_vc26f"]
+
+[node name="base" type="Node2D"]
+script = ExtResource("1_0t4x2")
+
+[node name="connecter" type="Node" parent="."]
+script = ExtResource("1_7refr")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="eye_l" type="Sprite2D" parent="."]
+material = ExtResource("3_6d2e6")
+position = Vector2(-130.125, -94)
+scale = Vector2(0.125, 0.5)
+texture = ExtResource("4_1b4aa")
+script = ExtResource("5_hdb5m")
+
+[node name="eye_r" type="Sprite2D" parent="."]
+material = ExtResource("3_6d2e6")
+position = Vector2(132.875, -98)
+scale = Vector2(0.125, 0.5)
+texture = ExtResource("4_1b4aa")
+script = ExtResource("5_hdb5m")
+
+[node name="mouth" type="Sprite2D" parent="."]
+material = ExtResource("6_4ntyd")
+position = Vector2(-2, 134)
+scale = Vector2(0.125, 0.5)
+texture = ExtResource("4_1b4aa")
+script = ExtResource("7_vc26f")

@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "browser-socket": "^1.0.1"
+  }
+}
