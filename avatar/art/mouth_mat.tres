@@ -4,6 +4,6 @@
 
 [resource]
 shader = ExtResource("1_rl5ef")
-shader_parameter/eye_selection = 2
+shader_parameter/eye_selection = 1
 shader_parameter/type = 0.5
 shader_parameter/colour = null

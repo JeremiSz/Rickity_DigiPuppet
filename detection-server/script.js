@@ -29,7 +29,7 @@ video.addEventListener("play", () => {
     socket.onopen = (_event) => {
   const ticker = setInterval(async () => {
     const detections = await faceapi
-      .detectAllFaces(video, new faceapi.TinyFaceDetectorOptions())
+      .detectSingleFace(video, new faceapi.TinyFaceDetectorOptions())
       .withFaceLandmarks();
 
     const resizedDetections = faceapi.resizeResults(detections, {
@@ -45,14 +45,12 @@ video.addEventListener("play", () => {
         width: 1.0,
     });
     let array_out = new Float32Array(68 * 2);
-    let poses = normalisedDetections[0].landmarks._positions;
+    let poses = normalisedDetections.landmarks._positions;
     for (let i = 0;i < 68 * 2;i += 2){
         let pos = poses[i/2];
-        console.log(pos);
         array_out[i] = pos._x;
         array_out[i + 1] = pos._y;
     }
-    console.log(array_out);
     socket.send(array_out);
   }, 15);
    

@@ -4,5 +4,6 @@
 
 [resource]
 shader = ExtResource("1_p7hi4")
-shader_parameter/eye_selection = 1
+shader_parameter/eye_selection = 0
+shader_parameter/type = null
 shader_parameter/colour = null
