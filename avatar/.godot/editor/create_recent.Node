@@ -1,5 +1,8 @@
+WorldEnvironment
+Node
+MeshInstance3D
+Camera3D
 Polygon2D
 TextureRect
 Sprite2D
 Camera2D
-Node

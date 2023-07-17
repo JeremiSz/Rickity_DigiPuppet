@@ -18,7 +18,6 @@ script = ExtResource("1_7refr")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="eye_l" type="Sprite2D" parent="."]
-visible = false
 material = ExtResource("3_6d2e6")
 position = Vector2(-130.125, -94)
 scale = Vector2(0.125, 0.5)
@@ -26,7 +25,6 @@ texture = ExtResource("4_1b4aa")
 script = ExtResource("5_hdb5m")
 
 [node name="eye_r" type="Sprite2D" parent="."]
-visible = false
 material = ExtResource("3_6d2e6")
 position = Vector2(132.875, -98)
 scale = Vector2(0.125, 0.5)
@@ -34,7 +32,6 @@ texture = ExtResource("4_1b4aa")
 script = ExtResource("5_hdb5m")
 
 [node name="mouth" type="Sprite2D" parent="."]
-visible = false
 material = ExtResource("6_4ntyd")
 position = Vector2(-2, 134)
 scale = Vector2(0.125, 0.5)
@@ -42,17 +39,21 @@ texture = ExtResource("4_1b4aa")
 script = ExtResource("7_vc26f")
 
 [node name="upperlip" type="Polygon2D" parent="."]
+visible = false
 polygon = PackedVector2Array(0.58, 21.38, 0.263966, 1.84798, 0.492046, 1.6541, 0.632285, 1.67523, 0.758843, 1.60602, 1.02523, 1.77071, 1.27003, 1.99544, 1.20803, 1.97618, 0.819756, 1.87721, 0.64023, 1.87517, 0.463073, 1.90044, 0.10489, 2.12856, 0, 0)
 script = ExtResource("8_f3qji")
 
 [node name="lowerlip" type="Polygon2D" parent="."]
+visible = false
 polygon = PackedVector2Array(0.58, 21.38, 0.263966, 1.84798, 0.492046, 1.6541, 0.632285, 1.67523, 0.758843, 1.60602, 1.02523, 1.77071, 1.27003, 1.99544, 1.20803, 1.97618, 0.819756, 1.87721, 0.64023, 1.87517, 0.463073, 1.90044, 0.10489, 2.12856, 0, 0)
 script = ExtResource("8_f3qji")
 
 [node name="lefteye" type="Polygon2D" parent="."]
+visible = false
 polygon = PackedVector2Array(0.58, 21.38, 0.263966, 1.84798, 0.492046, 1.6541, 0.632285, 1.67523, 0.758843, 1.60602, 1.02523, 1.77071, 1.27003, 1.99544)
 script = ExtResource("8_f3qji")
 
 [node name="righteye" type="Polygon2D" parent="."]
+visible = false
 polygon = PackedVector2Array(0.58, 21.38, 0.263966, 1.84798, 0.492046, 1.6541, 0.632285, 1.67523, 0.758843, 1.60602, 1.02523, 1.77071, 1.27003, 1.99544)
 script = ExtResource("8_f3qji")

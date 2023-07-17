@@ -1,2 +1,4 @@
+NoiseTexture2D
+StandardMaterial3D
 ShaderMaterial
 Shader

@@ -1,0 +1,40 @@
+[gd_scene load_steps=9 format=3 uid="uid://dxakcf7nd1y4l"]
+
+[ext_resource type="Script" path="res://3d_scripts/3d_root.gd" id="1_02qmi"]
+[ext_resource type="Script" path="res://connection_builder.gd" id="2_g8gqq"]
+[ext_resource type="ArrayMesh" uid="uid://btbuthpj2cgts" path="res://3d_art/robotv2.obj" id="3_453kc"]
+[ext_resource type="Material" uid="uid://b56ckllq4drv4" path="res://3d_art/tv_plastic.tres" id="4_5babt"]
+[ext_resource type="Script" path="res://3d_art/head_controller.gd" id="5_qyg0j"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bpdr0"]
+sky_top_color = Color(0.25098, 0.443137, 0.752941, 1)
+
+[sub_resource type="Sky" id="Sky_esiln"]
+sky_material = SubResource("ProceduralSkyMaterial_bpdr0")
+
+[sub_resource type="Environment" id="Environment_wnsa1"]
+sky = SubResource("Sky_esiln")
+ambient_light_color = Color(1, 1, 1, 1)
+reflected_light_source = 2
+
+[node name="scene" type="Node"]
+script = ExtResource("1_02qmi")
+
+[node name="connection" type="Node" parent="."]
+script = ExtResource("2_g8gqq")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.439)
+
+[node name="head" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, 0, 0, 0)
+mesh = ExtResource("3_453kc")
+surface_material_override/0 = ExtResource("4_5babt")
+script = ExtResource("5_qyg0j")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_wnsa1")
+
+[node name="sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.78152, -0.417457, 0.463633, 0, 0.743145, 0.66913, -0.62388, -0.522939, 0.580783, 0, 0, 0)
+shadow_enabled = true
