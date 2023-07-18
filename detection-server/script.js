@@ -25,7 +25,8 @@ video.addEventListener("play", () => {
   const canvas = faceapi.createCanvasFromMedia(video);
   document.body.append(canvas);
   faceapi.matchDimensions(canvas, { height: video.height, width: video.width });
-    const socket = new WebSocket("ws://127.0.0.1:65001");
+	let address = prompt("Address of engine machine");
+    const socket = new WebSocket("ws://"+address+":65001");
     socket.onopen = (_event) => {
   const ticker = setInterval(async () => {
     const detections = await faceapi
