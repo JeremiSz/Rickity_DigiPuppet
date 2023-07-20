@@ -3,7 +3,7 @@ extends MeshInstance3D
 const RANGE : Vector2 = Vector2.ONE * .5;
 
 func set_pos(points:PackedVector2Array):
-	handle_rotation(points[2],points[14],points[27],points[8]);
+	#handle_rotation(points[2],points[14],points[27],points[8]);
 	return
 	
 func handle_rotation(pl:Vector2,pr:Vector2,pt:Vector2,pb:Vector2):
